@@ -26,17 +26,14 @@ function reset() {
     $("#scoreBox").html(score);
     randomNumber = Math.floor(Math.random() * 112) + 40;
     $("#randomNumberBox").html(randomNumber);
-     random = Math.floor(Math.random() * 12) + 1;
-randomtwo = Math.floor(Math.random() * 12) + 2;
-randomthree = Math.floor(Math.random() * 12) + 3;
-randomfour = Math.floor(Math.random() * 12) + 4;
+    random = Math.floor(Math.random() * 12) + 1;
+    randomtwo = Math.floor(Math.random() * 12) + 2;
+    randomthree = Math.floor(Math.random() * 12) + 3;
+    randomfour = Math.floor(Math.random() * 12) + 4;
 }
 
 //to start game and be able to reset later
 function initalizeGame() {
-    
-    //wins = "";
-    //losses = "";
   
     $("#randomNumberBox").html(randomNumber);
     
@@ -71,7 +68,7 @@ function initalizeGame() {
         var html =
 
         "<p>Wins: " + wins + "</p>" +
-        "<p>Losses: " + losses + "</p>";
+        "<p> Losses: " + losses + "</p>";
 
         document.querySelector("#winBox").innerHTML = html;
 
@@ -179,16 +176,12 @@ function initalizeGame() {
 
                 var html =
 
-                "<p>Wins: " + wins + "</p>" +
-                "<p>Losses: " + losses + "</p>";
+                "<p>Wins:  " + wins + "</p>" +
+                "<p> Losses: " + losses + "</p>";
         
                 document.querySelector("#winBox").innerHTML = html;
                     });
-                    /*
-                    jewels = parseInt(jewels);
-                    jeweltwo = parseInt(jeweltwo);
-                    jewelthree= parseInt(jewelthree);
-                    jewelfour= parseInt(jewelfour);*/
+                    
                 }
 //----------------------------------------------------------------------
   
@@ -205,24 +198,5 @@ if(score === randomNumber){
    initalizeGame()
        
    };
-
-  
- /* if(reset === true) function reset(){
-      
-      $("#scoreBox").html(score);
-  
-      $("#randomNumberBox").html(randomNumber);
-  
-         };
-    */
-
-
-/*function reset(){
-  
-    var randomNumber = Math.floor(Math.random() * 112) + 40;
-$("#randomNumberBox").html(randomNumber)
-
-score = 0;
-};*/
 
 });

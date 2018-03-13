@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
 
-    <div class="randomNumber" id="randomNumberBox">Score to reach</div>
-    <div class="wins-losses" id="winBox"></div>
+    
+    
     <div class="intro">Welcome to Jewels!</div>
-    <div class="instructions">Instructions: Each Jewel is set to a different Value. 
-        Rack up your Score to equal the Target score by clicking the jewels.
+    <div class="instructions"><b>Instructions:</b> Each Jewel is set to a different Value. Click the jewels until you reach the Target Score.
+        
         Good Luck!
     </div>
     <button class="jewels" id="jewel-1" value = "1"></button>
     <button class="jewels" id="jewel-2" value = "2"></button>
     <button class="jewels" id="jewel-3" value = "3"></button>
     <button class="jewels" id="jewel-4" value = "4"></button>
+    <div class = "scoreText">Score:</div>
     <div class="score" id="scoreBox"></div>
+    <div class="numberToMatch">Number to Match:</div>
+    <div class="randomNumber" id="randomNumberBox">Score to reach</div>
+    <div class="wins-losses" id="winBox"></div>
 
     <script src="./JewelGame.js">
         
@@ -28,13 +33,16 @@
     <style>
         #jewel-1{
             background-color:yellow;
+            background-image:url("https://i.imgur.com/rM2AtoK.png");
             width:200px;
             height:200px;
             border:3px solid black;
             margin:10px;
+        
         }
         #jewel-2{
             background-color:blue;
+            background-image: url("https://i.imgur.com/6iuJtv3.jpg");
             width:200px;
             height:200px;
             border:3px solid black;
@@ -42,6 +50,7 @@
         }
         #jewel-3{
             background-color:green;
+            background-image: url("https://i.imgur.com/Qh7bD7u.jpg");
             width:200px;
             height:200px;
             border:3px solid black;
@@ -49,6 +58,7 @@
         }
         #jewel-4{
             background-color:red;
+            background-image: url("https://i.imgur.com/mwwfWlG.png");
             width:200px;
             height:200px;
             border:3px solid black;
@@ -58,49 +68,55 @@
         .score{
             background:lightblue;
             width:100px;
-            height:100px;
+            height:70px;
             border:3px solid black;
             margin:20px;
-            font-size: 30px;
+            font-size: 40px;
             text-align: center;
-            padding:5px 0px;
+            padding-top:30px;
         }
 
         .wins-losses{
-            background-color: lightcoral;
-            width:100px;
-            height:100px;
+            background-color: yellow;
+            width:200px;
+            height:150px;
             border:3px solid black;
-            margin:20px;
+            margin:30px;
             position:relative;
             display:flex;
-            font-size:15px;
+            font-size:30px;
+            
+
 
         }
         .randomNumber{
             background-color: lightgreen;
             width:100px;
-            height:100px;
+            height:70px;
             border:3px solid black;
             margin:20px;
             color:black;
-            font-size: 30px;
+            font-size: 40px;
             padding:10px;
             text-align: center;
+            position: absolute;
+            left:220px;
+            top:570px;
+            padding-top:30px;
         
         }
 
         .intro{
             align-items: left;
-            width:200px;
-            height:150px;
+            width:630px;
+            height:90px;
             font-size:50px;
             font-weight: bold;
             padding:10px;
             background-color: azure;
-            position:absolute;
-            left:300px;
-            top:80px;
+            margin:20px;
+            font-family: 'Rammetto One', cursive;
+            text-align: center;
             
         }
 
@@ -109,11 +125,31 @@
             width:300px;
             height:120px;
             background-color: lightpink;
-            font-size: 20px;
-            position:absolute;
-            left:550px;
-            top:80px;
+            font-size: 22px;
+           margin:20px;
+           margin-left:160px;
             padding:10px;
+            border: 2px grey;
+            border-style: ridge;
+        }
+
+        .scoreText{
+            font-size:30px;
+            font-weight: Bold;
+            margin-left:20px;
+            color:whitesmoke;
+        }
+        .numberToMatch{
+            font-size:30px;
+            font-weight: bold;
+            position:absolute;
+            left:220px;
+            top: 540px;
+            color:whitesmoke;
+        }
+
+        body{
+            background-image: url(zwartevilt.png)
         }
     </style>
 </body>
